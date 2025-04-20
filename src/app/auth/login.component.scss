@@ -1,0 +1,98 @@
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  
+    $primary-blue: #4465a6;
+    $pink-accent: #f48fb1;
+    
+    .login-form {
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, $primary-blue 50%, $pink-accent 100%);
+      padding: 1.5rem;
+    
+      .login-card {
+        width: 100%;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        background-color: #ffffffd9;
+        backdrop-filter: blur(8px);
+      }
+    
+      .header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    
+        h2 {
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: $primary-blue;
+        }
+    
+        .subtitle {
+          font-size: 0.95rem;
+          color: #666;
+        }
+      }
+    
+      .full-width {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    
+      .login-button {
+        background-color: $primary-blue;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    
+        &:hover {
+          background-color: darken($primary-blue, 10%);
+        }
+      }
+    }
+    
+  
+    .login-card {
+      width: 100%;
+    }
+  
+    .login-image {
+      flex-grow: 1;
+      background-color: #263173;
+  
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .full-width {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  // RESPONSIVE: para celulares
+  @media (max-width: 768px) {
+    .login-wrapper {
+      flex-direction: column;
+  
+      .login-image {
+        display: none;
+      }
+  
+      .login-form {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+  

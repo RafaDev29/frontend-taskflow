@@ -1,0 +1,30 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <div class="sidebar-header">
+      <h2>Task<span>Flow</span></h2>
+    </div>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+
+      <!-- Puedes agregar más ítems aquí -->
+      <a mat-list-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Cerrar sesión</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="topbar">
+      <span class="welcome">Bienvenido, {{ username }}</span>
+    </mat-toolbar>
+
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

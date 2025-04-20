@@ -1,0 +1,54 @@
+<div class="login-wrapper">
+    <!-- Lado del formulario -->
+    <div class="login-form">
+        <mat-card class="login-card">
+          <div class="header">
+            <h2>👋 Bienvenido de nuevo</h2>
+            <p class="subtitle">Ingresa tus credenciales para continuar</p>
+          </div>
+      
+          <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Usuario</mat-label>
+                <input matInput formControlName="username" />
+              </mat-form-field>
+      
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Contraseña</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="password"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  type="button"
+                  (click)="hide = !hide"
+                >
+                  <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </mat-form-field>
+      
+              <button
+                mat-raised-button
+                color="primary"
+                class="full-width login-button"
+                type="submit"
+                [disabled]="loginForm.invalid"
+              >
+                Ingresar
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+  
+    <!-- Lado de la imagen -->
+    <div class="login-image">
+      <img src="https://img.freepik.com/free-vector/profit-growth-strategy-idea-business-development-solution_335657-3160.jpg?t=st=1745104943~exp=1745108543~hmac=99379a05c6d87489a15dbb0c8a620ce1026419bf0345bab16ef1d4be6e4c2337&w=996" alt="Fondo login" />
+    </div>
+  </div>
+  

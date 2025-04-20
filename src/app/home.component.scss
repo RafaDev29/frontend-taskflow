@@ -1,0 +1,65 @@
+$primary: #4465a6;
+$pink-accent: #f48fb1;
+
+.layout-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 220px;
+  background: #f7f9fc;
+  padding-top: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $primary;
+
+  span {
+    color: $pink-accent;
+  }
+}
+
+.mat-nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #333;
+  transition: background 0.2s;
+
+  mat-icon {
+    color: $primary;
+  }
+
+  &.active {
+    background: #e3f2fd;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  color: rgb(4, 100, 209);
+
+  .welcome {
+    font-weight: 500;
+  }
+}
+
+.page-content {
+  padding: 2rem;
+}
